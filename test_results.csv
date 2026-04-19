@@ -1,5 +1,0 @@
-id,module,name,file,doc,markers,status,message,duration
-dm_unit_test.py::TestDataManipulation::test_drop_duplicates,dm_unit_test,test_drop_duplicates,dm_unit_test.py,Tests the drop_duplicates method by checking if it correctly drops duplicate rows from a pandas DataFrame.,,passed,,0.0034721000000002
-dm_unit_test.py::TestDataManipulation::test_drop_nan,dm_unit_test,test_drop_nan,dm_unit_test.py,Tests the drop_nan method by checking if it correctly drops rows with NaN values from a pandas DataFrame.,,passed,,0.0027935999999999517
-dm_unit_test.py::TestDataManipulation::test_file_exists,dm_unit_test,test_file_exists,dm_unit_test.py,Tests the file_exists method by checking if it correctly identifies the existence of a file.,,passed,,0.0020199000000000744
-dm_unit_test.py::TestDataManipulation::test_read_csv,dm_unit_test,test_read_csv,dm_unit_test.py,Tests the read_csv method by checking if it correctly reads a CSV file and returns a pandas DataFrame.,,passed,,0.005096500000000059

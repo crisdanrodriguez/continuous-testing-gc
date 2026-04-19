@@ -1,26 +1,28 @@
-# Ignore Python bytecode files
+# Python
 __pycache__/
-*.pyc
+*.py[cod]
+*.pyo
+*.pyd
+.pytest_cache/
+.mypy_cache/
+.coverage
+coverage.xml
 
-# Ignore Anaconda environment files
+# Virtual environments
+.venv/
+venv/
 env/
-*.yaml
-*.lock
 
-# Ignore IDE files
-.vscode/
+# Jupyter
+.ipynb_checkpoints/
+
+# Editors
 .idea/
+.vscode/
 
-# Ignore log files
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
 *.log
-
-# Ignore compiled binaries
-*.exe
-*.dll
-*.so
-*.dylib
-
-# Ignore data files
-data/
-*.json
-*.xlsx

@@ -1,0 +1,11 @@
+id,module,name,file,doc,markers,status,message,duration
+tests/test_data_manipulation.py::test_file_exists,test_data_manipulation,test_file_exists,tests/test_data_manipulation.py,Validates that the configured CSV fixture exists.,,passed,,0.0024
+tests/test_data_manipulation.py::test_file_exists_returns_false_for_missing_file,test_data_manipulation,test_file_exists_returns_false_for_missing_file,tests/test_data_manipulation.py,Returns False when the configured file does not exist.,,passed,,0.0021
+tests/test_data_manipulation.py::test_read_csv_returns_expected_dataframe,test_data_manipulation,test_read_csv_returns_expected_dataframe,tests/test_data_manipulation.py,Reads the sample CSV fixture into a DataFrame.,,passed,,0.0048
+tests/test_data_manipulation.py::test_read_csv_returns_none_for_missing_file,test_data_manipulation,test_read_csv_returns_none_for_missing_file,tests/test_data_manipulation.py,Returns None when attempting to read a missing CSV file.,,passed,,0.0025
+tests/test_data_manipulation.py::test_drop_nan,test_data_manipulation,test_drop_nan,tests/test_data_manipulation.py,Drops rows that contain missing values.,,passed,,0.0027
+tests/test_data_manipulation.py::test_drop_duplicates,test_data_manipulation,test_drop_duplicates,tests/test_data_manipulation.py,Drops duplicate rows from a DataFrame.,,passed,,0.0023
+tests/test_data_manipulation.py::test_drop_columns,test_data_manipulation,test_drop_columns,tests/test_data_manipulation.py,Drops selected columns from a DataFrame.,,passed,,0.0022
+tests/test_data_manipulation.py::test_rename_columns,test_data_manipulation,test_rename_columns,tests/test_data_manipulation.py,Renames DataFrame columns using a mapping.,,passed,,0.0022
+tests/test_data_manipulation.py::test_change_column_type,test_data_manipulation,test_change_column_type,tests/test_data_manipulation.py,Converts a column to the requested dtype.,,passed,,0.0026
+tests/test_data_manipulation.py::test_save_csv,test_data_manipulation,test_save_csv,tests/test_data_manipulation.py,Saves a DataFrame to disk and creates parent folders when required.,,passed,,0.0039

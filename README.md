@@ -1,81 +1,123 @@
 # Continuous Testing with GitHub Copilot
 
-The code was created using GitHub Copilot to observe the capabilities of the tool and determine if it can be used for automated testing.
+[![CI](https://github.com/crisdanrodriguez/continuous-testing-gc/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/crisdanrodriguez/continuous-testing-gc/actions/workflows/ci.yml)
+![Python 3.8](https://img.shields.io/badge/python-3.8-blue)
+![Dash](https://img.shields.io/badge/dash-reporting-0A66C2)
 
-Acronyms: 
-- GC = GitHub Copilot
-- GCC = GitHub Copilot Chat
+Small Python project that explores a simple continuous testing workflow with GitHub Copilot, CSV-based test outputs, and a lightweight Dash report.
 
----
+## Table of Contents
 
-# Table of Contents
+- [Overview](#overview)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Project Structure](#project-structure)
+- [Results](#results)
+- [Documentation](#documentation)
+- [Development](#development)
+- [License](#license)
+- [AI Assistance and Last Updated](#ai-assistance-and-last-updated)
 
-- [How to Setup](#how-to-setup)
+## Overview
 
-- [Results Description](#results-description)
-    - [Observations](#observations)
-    - [Test Automation Results](#test-automation-results)
-    - [Test Report Results](#test-report-results)
+This repository documents a compact proof of concept around:
 
----
+- basic CSV data manipulation utilities in Python
+- automated test execution with GitHub Actions
+- a small Dash app that visualizes sample test results
 
-# How to Setup
+The repository is intentionally minimal. It focuses on the current implemented behavior without overstating scope or maturity.
 
-1. Clone the repository
-```
-git clone https://github.com/cristian-daniel-rodriguez/continuous_testing_gc.git
-```
-2. Open an Anaconda prompt and navigate to the root of the repository
-```
-cd .\path\to\continuous_testing_gc
-```
-3. Install the ct_gc environment
-```
+## Installation
+
+Clone the repository and create the Conda environment:
+
+```bash
+git clone https://github.com/crisdanrodriguez/continuous-testing-gc.git
+cd continuous-testing-gc
 conda env create -f environment.yml
-```
-4. Activate the Anaconda environment
-```
-conda activate ct_gc
+conda activate continuous-testing-gc
 ```
 
----
+## Usage
 
-# Results Description
+Run the test suite:
 
-## Observations
-📄 General:
-- GC can be used for doing Continuous Testing, however the GCC needs to be used for additional help
-    - Mainly, the GCC is very helpful for automating the generation of tests and/or KPIs for each new pull request, push, and/or release
-    In this use case, GitHub Actions was used for the automation
-- GCC is capable of generating a basic test report dashboard 
-- GCC is helpful for explaining code
-    - The explanation of the selected code is well described, of course you will need some programming knowledge to understand
-- GCC is really useful and quicker compared to searching on the internet
+```bash
+pytest -q
+```
 
-✅ Positive:
-- Multiple CI framework options proposed for doing the automation tests
-- If you make any modification in the automatically generated code, for the following automatic generations includes the change made manually by the user
-- The solution can be extended for other uses like KPI evaluations
-- GC propose some other related useful functions that can be added to the scripts
-- The code documentation provided by GCC using docstrings is pretty good
+Launch the dashboard with the committed sample results file:
 
-❌ Negative
-- Needs the GCC functionality
-- Future questions to GCC had to be made in order to get the entire workflow running correctly
-- The proposed functions from GC used libraries that have not been previously imported and it does not warn you
+```bash
+python -m continuous_testing_gc.dashboard
+```
 
+Use a different CSV results file if needed:
 
-## Test Automation Results
+```bash
+python -m continuous_testing_gc.dashboard --results path/to/test_results.csv
+```
 
-Continuous testing with GitHub Actions with every pull request or merge into master branch
+## Project Structure
 
-![Alt text](assets/image.png)
-![Alt text](assets/image-1.png)
+```text
+.
+|-- .github/workflows/ci.yml
+|-- continuous_testing_gc/
+|   |-- __init__.py
+|   |-- dashboard.py
+|   `-- data_manipulation.py
+|-- data/
+|   `-- sample_input.csv
+|-- docs/
+|   |-- images/
+|   |   |-- dashboard-report.png
+|   |   |-- github-actions-run-1.png
+|   |   `-- github-actions-run-2.png
+|   |-- project-notes.md
+|   `-- results/
+|       `-- test_results_sample.csv
+|-- tests/
+|   `-- test_data_manipulation.py
+|-- .editorconfig
+|-- .gitattributes
+|-- .gitignore
+|-- environment.yml
+`-- README.md
+```
 
-## Test Report Results
-Unit testing results dashboard
+## Results
 
-![Alt text](assets/image-2.png)
+- [Sample test results CSV](docs/results/test_results_sample.csv)
+- [GitHub Actions run screenshot 1](docs/images/github-actions-run-1.png)
+- [GitHub Actions run screenshot 2](docs/images/github-actions-run-2.png)
+- [Dash report screenshot](docs/images/dashboard-report.png)
 
----
+## Documentation
 
+- [Project notes](docs/project-notes.md)
+
+## Development
+
+The repository includes:
+
+- a portable GitHub Actions workflow for running tests on pushes and pull requests
+- a small `tests/` suite that covers the current data manipulation helpers
+- sample input and sample test output files kept outside the repository root
+
+Before opening a pull request, run:
+
+```bash
+pytest -q
+```
+
+## License
+
+This repository does not currently include a license file.
+
+## AI Assistance and Last Updated
+
+This repository includes code and documentation originally created and later refined with AI-assisted workflows. The current structure and README were updated to reflect the files that actually exist in the repository.
+
+Last updated: 2026-04-19
