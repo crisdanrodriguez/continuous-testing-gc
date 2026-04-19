@@ -1,8 +1,7 @@
 # Continuous Testing with GitHub Copilot
 
-[![CI](https://github.com/crisdanrodriguez/continuous-testing-gc/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/crisdanrodriguez/continuous-testing-gc/actions/workflows/ci.yml)
 ![Python 3.8](https://img.shields.io/badge/python-3.8-blue)
-![Dash](https://img.shields.io/badge/dash-reporting-0A66C2)
+[![Tests](https://github.com/crisdanrodriguez/continuous-testing-gc/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/crisdanrodriguez/continuous-testing-gc/actions/workflows/ci.yml)
 
 Small Python project that explores a simple continuous testing workflow with GitHub Copilot, CSV-based test outputs, and a lightweight Dash report.
 
@@ -22,9 +21,9 @@ Small Python project that explores a simple continuous testing workflow with Git
 
 This repository documents a compact proof of concept around:
 
-- basic CSV data manipulation utilities in Python
-- automated test execution with GitHub Actions
-- a small Dash app that visualizes sample test results
+- Basic CSV data manipulation utilities in Python
+- Automated test execution with GitHub Actions
+- A small Dash app that visualizes sample test results
 
 The repository is intentionally minimal. It focuses on the current implemented behavior without overstating scope or maturity.
 
@@ -62,7 +61,7 @@ python -m continuous_testing_gc.dashboard --results path/to/test_results.csv
 ## Project Structure
 
 ```text
-.
+continuous-testing-gc
 |-- .github/workflows/ci.yml
 |-- continuous_testing_gc/
 |   |-- __init__.py
@@ -102,9 +101,9 @@ python -m continuous_testing_gc.dashboard --results path/to/test_results.csv
 
 The repository includes:
 
-- a portable GitHub Actions workflow for running tests on pushes and pull requests
-- a small `tests/` suite that covers the current data manipulation helpers
-- sample input and sample test output files kept outside the repository root
+- A portable GitHub Actions workflow for running tests on pushes and pull requests
+- A small `tests/` suite that covers the current data manipulation helpers
+- Sample input and sample test output files kept outside the repository root
 
 Before opening a pull request, run:
 
