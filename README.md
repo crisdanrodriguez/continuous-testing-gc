@@ -1,7 +1,8 @@
 # Continuous Testing with GitHub Copilot
 
-[![Python 3.8](https://img.shields.io/badge/Python-3.8-3776AB?logo=python&logoColor=white)](https://www.python.org/)
-[![Tests](https://github.com/crisdanrodriguez/continuous-testing-gc/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/crisdanrodriguez/continuous-testing-gc/actions/workflows/ci.yml)
+[![Python](https://img.shields.io/badge/Python-3.8-0A66C2?style=flat-square&logo=python&logoColor=white)](https://www.python.org/)
+[![Dash](https://img.shields.io/badge/Dash-2.13.0-0A66C2?style=flat-square&logo=plotly&logoColor=white)](https://dash.plotly.com/)
+[![Tests](https://img.shields.io/github/actions/workflow/status/crisdanrodriguez/continuous-testing-gc/ci.yml?branch=main&style=flat-square&logo=githubactions&logoColor=white&label=Tests&)](https://github.com/crisdanrodriguez/continuous-testing-gc/actions/workflows/ci.yml)
 
 Small Python project that explores a simple continuous testing workflow with GitHub Copilot, CSV-based test outputs, and a lightweight Dash report.
 
